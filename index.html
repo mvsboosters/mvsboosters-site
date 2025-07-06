@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVS Boosters | Supporting Monta Vista Speech</title>
+    <style>
+	/* General Body Styles */
+	body {
+	    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	    margin: 0;
+	    padding: 0;
+	    line-height: 1.7;
+	    color: #333;
+	    background-color: #ffffff;
+	}
+
+	/* Header and Navigation */
+	header {
+	    background: #fff;
+	    padding: 1rem 2.5rem;
+	    border-bottom: 1px solid #e0e0e0;
+	    position: sticky;
+	    top: 0;
+	    z-index: 1000;
+	}
+
+	nav {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	}
+
+	nav .logo a {
+	    font-size: 1.6rem;
+	    font-weight: 700;
+	    color: #004a87;
+	    text-decoration: none;
+	}
+
+	nav ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    display: flex;
+	}
+
+	nav ul li {
+	    margin-left: 2.5rem;
+	}
+
+	nav ul li a {
+	    text-decoration: none;
+	    color: #555;
+	    font-weight: 600;
+	    transition: color 0.3s ease;
+	}
+
+	nav ul li a:hover {
+	    color: #7b00e3;
+	}
+
+	/* Hero Section */
+	.hero {
+	    background: #532699 center center/cover no-repeat;
+	    color: #fff;
+	    text-align: center;
+	    padding: 6rem 2rem;
+	}
+
+	.hero-content h1 {
+	    font-size: 3.2rem;
+	    font-weight: 700;
+	    margin-bottom: 1rem;
+	}
+
+	.hero-content p {
+	    font-size: 1.3rem;
+	    max-width: 650px;
+	    margin: 0 auto 2rem auto;
+	    line-height: 1.6;
+	}
+
+	/* Buttons */
+	.cta-button {
+	    padding: 12px 28px;
+	    text-decoration: none;
+	    border-radius: 5px;
+	    font-weight: 700;
+	    font-size: 1rem;
+	    transition: all 0.3s ease;
+	    display: inline-block;
+	}
+
+	.cta-button.primary {
+	    background: #2c0073;
+	    color: #fff;
+	}
+
+	.cta-button.primary:hover {
+	    background: #7b00e3;
+	    transform: translateY(-1px);
+	}
+
+	.cta-button.secondary {
+	    background: transparent;
+	    color: #532699;
+	    border: 2px solid #005A9C;
+	}
+
+	.cta-button.secondary:hover {
+	    background: #7b00e3;
+	    color: #fff;
+	}
+
+
+	/* Content Sections */
+	.content-section {
+	    padding: 8.8rem 2.5rem;
+	}
+
+	.content-section h2 {
+	    font-size: 2.8rem;
+	    text-align: center;
+	    margin-bottom: 1rem;
+	    color: #532699;
+	}
+
+	.section-subtitle {
+	    text-align: center;
+	    font-size: 1.15rem;
+	    color: #444;
+	    max-width: 750px;
+	    margin: 0 auto 2rem auto;
+	}
+
+	.alt-bg {
+	    background: #f7f3ff;
+	}
+
+	/* About Section */
+	.about-container {
+	    max-width: 800px;
+	    margin: 1rem auto 0 auto;
+	    text-align: left;
+	}
+
+	.nonprofit-info {
+	    margin-top: 2rem;
+	    padding: 1.5rem;
+	    background-color: #f7f3ff;
+	    border-left: 5px solid #7b00e3;
+	    border-radius: 5px;
+	    font-size: 0.95rem;
+	}
+
+	/* Impact Section */
+	.impact-grid {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	    gap: 2rem;
+	    max-width: 1200px;
+	    margin: 0 auto;
+	    text-align: left;
+	}
+
+	.impact-item {
+	    background: #fff;
+            margin-top: 0.5rem;
+	    padding: 1.6rem;
+	    border-radius: 8px;
+	    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+	    border-top: 4px solid #7b00e3;
+	}
+
+	.impact-item h3 {
+	    margin-top: 0;
+	    color: #532699;
+	}
+
+	/* Get Involved Section */
+	.involvement-flex {
+	    display: flex;
+	    justify-content: center;
+	    gap: 2rem;
+	    flex-wrap: wrap;
+	    max-width: 950px;
+	    margin: 0 auto;
+	}
+
+	.involvement-option {
+	    flex: 1;
+	    min-width: 300px;
+	    background: #fff;
+	    padding: 1.6rem;
+	    border-radius: 8px;
+	    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+	    text-align: center;
+	}
+
+	.involvement-option h3 {
+	    font-size: 1.7rem;
+	    margin-top: 0;
+	    margin-bottom: 1rem;
+	    color: #532699;
+	}
+
+	.involvement-option p {
+	    margin-bottom: 2rem;
+	}
+
+	/* Footer */
+	footer {
+	    background: #180245;
+	    color: #ccc;
+	    text-align: center;
+	    padding: 2.5rem;
+	    font-size: 0.9rem;
+	}
+	footer p {
+	    margin: 0.5rem 0;
+	}
+	footer strong {
+	    color: #fff;
+	}
+    </style>
+</head>
+<body>
+    <a name="hero"></a>
+    <header>
+        <nav>
+	    <div class="logo">
+		<a href="#hero">
+	            <img src="logo.png" alt="Monta Vista Speech Boosters Logo" style="height: 120px;">
+		</a>
+	    </div>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#impact">Our Impact</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Empowering Monta Vista's Voices</h1>
+                <p>We are the official 501(c)(3) nonprofit organization providing the financial and volunteer support for the Monta Vista Speech team.</p>
+                <a href="#get-involved" class="cta-button primary">Donate Now</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>Monta Vista Speech Boosters</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>The <strong>MVS Boosters</strong> is a parent and community-led nonprofit organization with a single, vital mission: to ensure the students of the Monta Vista Speech team have the resources they need to excel. We handle the fundraising, financial management, and volunteer coordination that allows the coaches and students to focus on what they do best: competing, learning, and growing.</p>
+                    <p>As a registered 501(c)(3) organization, your contributions are tax-deductible. Our operations are funded entirely by the generosity of parents, alumni, and community members like you.</p>
+                    <div class="nonprofit-info">
+                        <strong>Official Nonprofit Information</strong><br>
+                        Organization: Monta Vista High School Speech Boosters Inc.<br>
+                        EIN: 82-2152635
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="content-section alt-bg">
+            <h2>Your Support in Action</h2>
+            <p class="section-subtitle">100% of our funding comes from donations. Here's what your contributions make possible:</p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h3>Professional Coaching</h3>
+                    <p>Funding stipends for experienced coaches who provide invaluable guidance and mentorship to our students.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Tournament Fees</h3>
+                    <p>Covering registration costs for local, state, and national tournaments, ensuring every student has the chance to compete.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Travel & Logistics</h3>
+                    <p>Arranging and subsidizing travel and lodging for out-of-town competitions, a major expense for the team.</p>
+                </div>
+                <div class="impact-item">
+                    <h3>Team Resources</h3>
+                    <p>Providing essential educational materials, software subscriptions, and funding for team-building events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-involved" class="content-section">
+            <h2>Join Us in Supporting the Team</h2>
+            <p class="section-subtitle">There are two primary ways you can make a difference.</p>
+            <div class="involvement-flex">
+                <div class="involvement-option">
+                    <h3>Donate</h3>
+                    <p>Your financial contribution, of any size, has a direct impact on our students. As a 501(c)(3), all donations are tax-deductible. Support student success today through platforms like Benevity or your company's matching gift program.</p>
+                    <a href="mailto:mvsboosters@gmail.com" class="cta-button primary">Make a Donation</a>
+                </div>
+                <div class="involvement-option">
+                    <h3>Volunteer</h3>
+                    <p>We rely on parents and community members to help with events, judge at tournaments, and assist with fundraising efforts. Your time is one of the most valuable gifts you can give. Let us know you're interested!</p>
+                    <a href="mailto:mvsboosters@gmail.com" class="cta-button primary">Sign Up to Volunteer</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>MVS Boosters</strong> is a registered 501(c)(3) nonprofit organization (EIN: 82-2152635).</p>
+        <p>&copy; 2025 MVS Boosters. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

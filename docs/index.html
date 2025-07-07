@@ -277,57 +277,62 @@
 
       /* Show the hamburger icon on mobile */
       .nav-toggle-label {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 1.5rem;
-        transform: translateY(-50%);
-        width: 40px;
-        cursor: pointer;
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 1.5rem;
+          transform: translateY(-50%);
+          width: 40px;
+          height: 36px; /* Give the label a defined height */
+          cursor: pointer;
+          /* Add padding or a background if you want a larger clickable area visually */
+          padding: 5px; /* Add some padding to increase the clickable area */
+          box-sizing: content-box; /* Ensure padding adds to the total size */
       }
 
-      .nav-toggle-label span,
-      .nav-toggle-label span::before,
-      .nav-toggle-label span::after {
-        display: block;
-        background: #532699;
-        height: 4px;
-        width: 100%;
-        border-radius: 2px;
-        position: relative;
-        transition: all 0.3s ease-in-out;
+      .nav-toggle-label div,
+      .nav-toggle-label div::before,
+      .nav-toggle-label div::after {
+          background: #532699;
+          height: 4px;
+          width: 100%; /* Make the lines span the full width of the label */
+          border-radius: 2px;
+          position: absolute; /* Change to absolute for better positioning within the label */
+          left: 0; /* Align lines to the left of the label */
+          transition: all 0.3s ease-in-out;
       }
 
-      .nav-toggle-label span::before,
-      .nav-toggle-label span::after {
-        content: '';
-        position: absolute;
+      .nav-toggle-label div {
+          top: 50%; /* Position the middle line vertically center within the label */
+          transform: translateY(-50%); /* Adjust for its own height */
       }
 
-      .nav-toggle-label span::before {
-        top: -12px;
+      .nav-toggle-label div::before {
+          content: '';
+          top: -12px; /* Position relative to the middle line */
       }
 
-      .nav-toggle-label span::after {
-        top: 12px;
+      .nav-toggle-label div::after {
+          content: '';
+          top: 12px; /* Position relative to the middle line */
       }
 
       /* When the hidden checkbox is checked, show the menu */
       .nav-toggle:checked ~ .nav-menu {
-        display: flex;
+          display: flex;
       }
 
       /* Animation for the hamburger icon to turn into an 'X' */
-      .nav-toggle:checked ~ .nav-toggle-label span {
-        background: transparent;
+      .nav-toggle:checked ~ .nav-toggle-label div {
+          background: transparent;
       }
-      .nav-toggle:checked ~ .nav-toggle-label span::before {
-        transform: rotate(45deg);
-        top: 0;
+      .nav-toggle:checked ~ .nav-toggle-label div::before {
+          transform: rotate(45deg);
+          top: 0;
       }
-      .nav-toggle:checked ~ .nav-toggle-label span::after {
-        transform: rotate(-45deg);
-        top: 0;
+      .nav-toggle:checked ~ .nav-toggle-label div::after {
+          transform: rotate(-45deg);
+          top: 0;
       }
 
       /* Adjust other sections for better mobile padding */
@@ -365,7 +370,7 @@
       </ul>
 
       <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
+        <div></div>
       </label>
     </nav>
   </header>
@@ -446,16 +451,10 @@
       // 1. Find the menu toggle checkbox.
       const navToggle = document.getElementById('nav-toggle');
 
-      // 2. Find all the links within the navigation menu.
-      const navLinks = document.querySelectorAll('.nav-menu a');
-
-      // 3. Add a "click" listener to every link.
-      navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              // 4. When a link is clicked, uncheck the box.
-              // This will trigger the CSS to hide the menu again.
-              navToggle.checked = false;
-          });
+      // 2. Add a "click" listener to the nav
+      const navMenu = document.getElementsByClassName('nav-menu')[0];
+      navMenu.addEventListener('click', () => {
+        navToggle.checked = false;
       });
   </script>
 </body>

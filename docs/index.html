@@ -37,11 +37,8 @@
       margin: 0 auto;
     }
 
-    nav .logo a {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #004a87;
-      text-decoration: none;
+    nav .logo img {
+      height: 120px;
     }
 
     nav ul {
@@ -67,20 +64,20 @@
     }
 
     /* Hero Section */
-    .hero {
+    section.hero {
       background: #532699 center center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 6rem 2rem;
     }
 
-    .hero-content h1 {
+    section.hero h1 {
       font-size: 3.2rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-top: 0;
     }
 
-    .hero-content p {
+    section.hero p {
       font-size: 1.3rem;
       max-width: 650px;
       margin: 0 auto 2rem auto;
@@ -121,18 +118,20 @@
 
 
     /* Content Sections */
-    .content-section {
-      padding: 8.8rem 2.5rem;
+    section.content {
+      padding: 3.5rem 2.5rem;
+      scroll-margin-top: 9rem;
     }
 
-    .content-section h2 {
+    section.content h2 {
       font-size: 2.8rem;
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0;
       color: #532699;
     }
 
-    .section-subtitle {
+    section .subtitle {
       text-align: center;
       font-size: 1.15rem;
       color: #444;
@@ -249,11 +248,15 @@
         padding: 0.5rem 1.5rem;
       }
 
+      nav .logo img {
+        height: 80px;
+      }
+
       /* Style the navigation menu for mobile dropdown */
       .nav-menu {
         display: none; /* Hide the menu by default */
         position: absolute;
-        top: 70px; /* Position it below the header (adjust if your logo change makes header taller) */
+        top: 90px;
         left: 0;
         right: 0;
         background-color: #fff;
@@ -336,18 +339,20 @@
       }
 
       /* Adjust other sections for better mobile padding */
-      .content-section {
-        padding: 4.5rem 1.5rem;
+      section.content {
+        padding: 3rem 1.5rem;
+        scroll-margin-top: 6.5rem;
       }
-      .hero {
-         padding: 4rem 1.5rem;
-      }
-      .hero-content h1 {
-        font-size: 2.5rem;
-      }
-      .content-section h2 {
+      section.content h2 {
         font-size: 2.2rem;
         padding-bottom: 1.5rem;
+        margin-top: 0;
+      }
+      section.hero {
+        padding: 4rem 1.5rem;
+      }
+      section.hero h1 {
+        font-size: 2.5rem;
       }
     }
   </style>
@@ -358,7 +363,7 @@
     <nav>
       <div class="logo">
         <a href="#hero">
-          <img src="images/logo.png" alt="Monta Vista Speech Boosters Logo" style="height: 60px; display: block;">
+          <img src="images/logo.png" alt="Monta Vista Speech Boosters Logo">
         </a>
       </div>
 
@@ -378,14 +383,12 @@
 
   <main>
     <section class="hero">
-      <div class="hero-content">
-        <h1>Empowering Monta Vista's Voices</h1>
-        <p>We are the official 501(c)(3) nonprofit organization providing the financial and volunteer support for the Monta Vista Speech team.</p>
-        <a href="#get-involved" class="cta-button primary">Donate Now</a>
-      </div>
+      <h1>Empowering Monta Vista's Voices</h1>
+      <p>We are the official 501(c)(3) nonprofit organization providing the financial and volunteer support for the Monta Vista Speech team.</p>
+      <a href="#get-involved" class="cta-button primary">Donate Now</a>
     </section>
 
-    <section id="about" class="content-section">
+    <section id="about" class="content">
       <h2>Monta Vista Speech Boosters</h2>
       <div class="about-container">
         <div class="about-text">
@@ -400,9 +403,9 @@
       </div>
     </section>
 
-    <section id="impact" class="content-section alt-bg">
+    <section id="impact" class="content alt-bg">
       <h2>Your Support in Action</h2>
-      <p class="section-subtitle">100% of our funding comes from donations. Here's what your contributions make possible:</p>
+      <p class="subtitle">100% of our funding comes from donations. Here's what your contributions make possible:</p>
       <div class="impact-grid">
         <div class="impact-item">
           <h3>Professional Coaching</h3>
@@ -423,9 +426,9 @@
       </div>
     </section>
 
-    <section id="get-involved" class="content-section">
+    <section id="get-involved" class="content">
       <h2>Join Us in Supporting the Team</h2>
-      <p class="section-subtitle">There are two primary ways you can make a difference.</p>
+      <p class="subtitle">There are two primary ways you can make a difference.</p>
       <div class="involvement-flex">
         <div class="involvement-option">
           <h3>Donate</h3>
